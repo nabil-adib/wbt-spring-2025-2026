@@ -5,98 +5,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 
 <body>
-    <a href="../index.html">Home</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="educations.html">Education</a> |
-    <a href="experience.html">Experience</a> |
-    <a href="contact.html">Contact</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a> </li>
+                <li><a href="educations.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Contact Me</h1>
+    <main>
+        <section>
+            <h1>Contact Me</h1>
 
-    <form method="post">
-        <fieldset>
-            <legend>Fill up all the necessary fields</legend>
+            <form method="post" aria-label="Contact Form">
+                <fieldset>
+                    <legend>Fill up all the necessary fields</legend>
 
-            <table>
-                <tr>
-                    <td><label for="firstName"> First Name:</label></td>
-                    <td><input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-                    </td>
-                </tr>
+                    <table>
+                        <tr>
+                            <td><label for="firstName">First Name:</label></td>
+                            <td><input type="text" id="firstName" name="firstName" placeholder="Enter your first name"
+                                    required></td>
+                        </tr>
 
-                <tr>
-                    <td><label for="lasttName"> Last Name:</label></td>
-                    <td><input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-                    </td>
-                </tr>
+                        <tr>
+                            <td><label for="lastName">Last Name:</label></td>
+                            <td><input type="text" id="lastName" name="lastName" placeholder="Enter your last name"
+                                    required></td>
+                        </tr>
 
-                <tr>
-                    <td><label>Gender:</label></td>
-                    <td><input type="radio" name="gender" value="male" required> Male
-                        <input type="radio" name="gender" value="female" required> Female
-                    </td>
-                </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female" required>
+                                <label for="female">Female</label>                        
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td><label for="email"> Email:</label></td>
-                    <td><input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </td>
-                </tr>
+                        <tr>
+                            <td><label for="company">Company:</label></td>
+                            <td><input type="text" id="company" name="company" placeholder="Enter your company name">
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td>Reason of Contact:</td>
+                            <td>
+                                <input type="checkbox" id="projects" name="reason" value="projects" required>
+                                <label for="projects">Projects</label>
+                                <input type="checkbox" id="thesis" name="reason" value="thesis">
+                                <label for="thesis">Thesis</label>
+                                <input type="checkbox" id="job" name="reason" value="job">
+                                <label for="job">Job</label>
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td><label for="company"> Company:</label></td>
-                    <td><input type="text" id="company" name="company" placeholder="Enter your company name">
-                    </td>
-                </tr>
+                        <tr>
+                            <td>Topics:</td>
+                            <td>
+                                <input type="checkbox" id="web" name="topics" value="web" required>
+                                <label for="web">Web Development</label>
+                                <input type="checkbox" id="mobile" name="topics" value="mobile">
+                                <label for="mobile">Mobile Development</label>
+                                <input type="checkbox" id="ai_ml" name="topics" value="ai_ml">
+                                <label for="ai_ml">AI/ML Development</label>                               
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td><label>Reason of Contact:</label></td>
-                    <td><input type="checkbox" value="projects" required> Projects
-                        <input type="checkbox" value="thesis"> Thesis
-                        <input type="checkbox" value="job"> Job
-                    </td>
-                </tr>
+                        <tr>
+                            <td><label for="date">Consultation Date:</label></td>
+                            <td><input type="date" id="date" name="consultationDate" required></td>
+                        </tr>
 
+                        <tr>
+                            <td><label for="msg">Message:</label></td>
+                            <td><textarea id="msg" name="message" rows="4" cols="30"></textarea></td>
+                        </tr>
 
-                <tr>
-                    <td><label>Topics:</label></td>
-                    <td><input type="checkbox" value="web" required> Web Development
-                        <input type="checkbox" value="mobile"> Mobile Development
-                        <input type="checkbox" value="ai_ml"> AI/ML Development
-                    </td>
-                </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Register">
+                                <input type="reset">
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td><label for="date">Consultation Date:</label></td>
-                    <td><input type="date" id="date" name="consultationDate" required></td>
-                </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-                <tr>
-                    <td><label for="msg">Message:</label></td>
-                    <td>
-                        <textarea id="msg" rows="4" cols="30"></textarea>
-                    </td>
-                </tr>
+    <footer>
+        <p>Developed by Nabil Adib</p>
+        <p>Copyright &copy; 2026</p>
+        <a href="https://www.linkedin.com/in/nabiladib14/" target="_blank">
+            <img src="../data/linkedin.png" alt="LinkedIn" width="30">
+        </a>
 
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Register">
-                        <input type="reset">
-                    </td>
-                </tr>
-
-
-            </table>
-
-        </fieldset>
-
-
-    </form>
+        <a href="https://github.com/nabil-adib" target="_blank">
+            <img src="../data/github.png" alt="GitHub" width="30">
+        </a>
+    </footer>
 
 </body>
 

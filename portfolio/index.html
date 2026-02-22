@@ -3,63 +3,75 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <a href="index.html">Home</a> |
-    <a href="html/projects.html">Projects</a> |
-    <a href="html/educations.html">Education</a> |
-    <a href="html/experience.html">Experience</a> |
-    <a href="html/contact.html">Contact</a>
 
+    <header>
+        <nav>
+            <ul>
+                <li><a class="active" href="html/projects.html">Projects</a></li>
+                <li><a href="html/educations.html">Education</a></li>
+                <li><a href="html/experience.html">Experience</a></li>
+                <li><a href="html/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <table cellpadding="10">
-        <tr>
-            <td>
-                <img src="data/profile.jfif" alt="profile image" width="150" height="150">
-            </td>
-            <td>
-                <h1>Md. Nabil Adibur Rahman</h1>
-                <h3><strong><em>Computer Science Student</em></strong></h3>
-                <p>Machine Learning Enthusiast</p>
-                <p><strong>Address: </strong>Mirpur, Dhaka, Bangladesh</p>
-            </td>
-        </tr>
-    </table>
+    <main>
 
+        <section id="div1">
+            <img src="data/profile.jpg" alt="profile image" width="150" height="150">
+            <h1>Md. Nabil Adibur Rahman</h1>
+            <h3><strong>Computer Science Student</strong></h3>
+            <p class="webtext">Machine Learning Enthusiast</p>
+            <p><strong>Address:</strong> Mirpur, Dhaka, Bangladesh</p>
+        </section>
 
+        <section id="div2">
+            <h2>About Me</h2>
+            <p>
+                Pursuing a BSc in Computer Science & Engineering at <strong>AIUB</strong>.
+                I focus on building intelligent systems that combine strong theoretical foundations
+                with clean, reproducible implementation.
+            </p>
 
-    <hr>
+            <p>
+                I have built structured management systems using object-oriented design in C#, C++,
+                and Java, and I work confidently with data structures and algorithmic problem-solving.
+                I also use Python for AI-focused experimentation and system prototyping.
+                My work includes designing modular systems, implementing core OOP principles,
+                and developing database-integrated applications.
+            </p>
+        </section>
 
-    <h2>About Me</h2>
-    <p>
-        Pursuing a BSc in Computer Science & Engineering at <strong>AIUB</strong>.
-        I focus on building intelligent systems that combine strong theoretical foundations with clean, reproducible
-        implementation.
-    </p>
+        <section>
+            <h2>Current Learning Goals</h2>
+            <ul>
+                <li>Strengthen statistics and ML theory</li>
+                <li>Build clean, reproducible data pipelines</li>
+                <li>Develop interpretable ML systems</li>
+                <li>Prepare for AI-focused higher studies</li>
+                <li>Contribute to Open Source ML/AI projects</li>
+            </ul>
+        </section>
 
-    <p>
-        I have built structured management systems using object-oriented design in C#, C++, and Java, and I work
-        confidently with data structures and algorithmic problem-solving. I also use Python for AI-focused
-        experimentation and system prototyping. My work includes designing modular systems, implementing core OOP
-        principles, and developing database-integrated applications.
-    </p>
+    </main>
 
-    <h2>Current Learning Goals</h2>
-    <ul>
-        <li>Strengthen statistics and ML theory</li>
-        <li>Build clean, reproducible data pipelines</li>
-        <li>Develop interpretable ML systems</li>
-        <li>Prepare for AI-focused higher studies</li>
-        <li>Contribute to Open Source ML/AI projects</li>
-    </ul>
+    <footer>
+        <p>Developed by Nabil Adib</p>
+        <p>Copyright &copy; 2026</p>
+        <a href="https://www.linkedin.com/in/nabiladib14/" target="_blank">
+            <img src="data/linkedin.png" alt="LinkedIn" width="30">
+        </a>
 
+        <a href="https://github.com/nabil-adib" target="_blank">
+            <img src="data/github.png" alt="GitHub" width="30">
+        </a>
+    </footer>
 
-
-    <p>Developed by Nabil Adib</p>
-    <p>Copyright &copy;2026</p>
 </body>
 
 </html>
