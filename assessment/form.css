@@ -1,3 +1,7 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     background-color: #ededed;
 }
@@ -7,7 +11,9 @@ h1 {
     text-align: left;
 }
 
-
+#donor_info {
+    padding-left: 20%;
+}
 
 span {
     color: red;
@@ -20,4 +26,20 @@ span {
 
 .label {
     text-align: right;
+}
+
+.recur {
+    width: 40px;
+}
+
+#other {
+    width: 220px;
+}
+
+.field {
+    width: 250px;
+}
+
+#select_country {
+    width: 250px;
 }
