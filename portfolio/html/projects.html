@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <header>
         <nav>
             <ul>
@@ -23,92 +24,81 @@
     <main>
         <h1>Featured Projects</h1>
 
-        <ol>
-            <li id="div1">
-                <h2>Smart Water Irrigation System</h2>
-                <table>
-                    <tr>
-                        <td><img src="../data/wi2.jpg" alt="Smart Irrigation Screenshot" width="200"></td>
-                        <td><img src="../data/wi1.jpg" alt="Smart Irrigation Screenshot" width="100"></td>
-                    </tr>
-                </table>
-                <p>
-                    <strong>Project Overview:</strong>
-                    An end-to-end Machine Learning pipeline designed for agricultural optimization.
-                    It connects microprocessor-based sensor data with ML models to enable efficient
-                    water management using real-time inputs such as moisture, temperature, and humidity.
-                </p>
-                <p><strong>Key Capabilities:</strong></p>
-                <ul>
-                    <li>Predicts irrigation requirements based on sensor inputs</li>
-                    <li>Determines crop suitability through environmental analysis</li>
-                    <li>Integrates hardware sensor data with ML models</li>
-                </ul>
-                <p class="webtext"><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Streamlit</p>
-                <p><a href="https://github.com/nabil-adib/microprocessor-water-irrigation" target="_blank">GitHub
-                        Repo</a></p>
-            </li>
+        <section>
+            <h2>Smart Water Irrigation System</h2>
 
-            <hr>
+            <div class="project-images">
+                <img src="../data/wi2.jpg" alt="Smart Irrigation Screenshot">
+                <img id="blinkit" src="../data/wi1.jpg" alt="Smart Irrigation Screenshot">
+            </div>
 
-            <li id="div2">
-                <h2>Library Management System</h2>
-                <table>
-                    <tr>
-                        <td><img src="../data/lms1.jpg" alt="Library System" width="200"></td>
-                        <td><img src="../data/lms2.jpg" alt="Library System" width="200"></td>
-                        <td><img src="../data/lms3.jpg" alt="Library System" width="200"></td>
-                    </tr>
-                </table>
-                <p>
-                    <strong>Project Overview:</strong>
-                    A Java-based desktop application that streamlines library operations
-                    using a clean Swing GUI and a MySQL backend for structured data management.
-                    Includes a dedicated Publisher module for improved tracking.
-                </p>
-                <p><strong>Features:</strong></p>
-                <ul>
-                    <li>Book Management with full CRUD operations</li>
-                    <li>Student registration and book issuance/return tracking</li>
-                    <li>Publisher management module</li>
-                    <li>Refactored architecture and improved UI design</li>
-                </ul>
-                <p><strong>Tech Stack:</strong> Java, Swing, MySQL, XAMPP, phpMyAdmin</p>
-                <p><a href="https://github.com/nabil-adib/library-management-system" target="_blank">GitHub Repo</a></p>
-            </li>
+            <p><strong>Project Overview:</strong>
+                Machine Learning pipeline for agricultural optimization using real-time sensor inputs.
+            </p>
 
-            <hr>
+            <ul>
+                <li>Predicts irrigation requirements</li>
+                <li>Determines crop suitability</li>
+                <li>Integrates hardware sensors with ML</li>
+            </ul>
 
-            <li>
-                <h2>Banking Management System</h2>
-                <table>
-                    <tr>
-                        <td><img src="../data/bms1.jpg" alt="Banking System" width="200"></td>
-                        <td><img src="../data/bms2.jpg" alt="Banking System" width="200"></td>
-                        <td><img src="../data/bms3.jpg" alt="Banking System" width="200"></td>
-                    </tr>
-                </table>
-                <p>
-                    <strong>Project Overview:</strong>
-                    A C# Windows Forms application simulating real-world banking operations
-                    with role-based authentication and transaction logging.
-                </p>
-                <p><strong>Features:</strong></p>
-                <ul>
-                    <li>Role-based login system (Customer, Employee, Manager)</li>
-                    <li>Secure deposits, withdrawals, transfers, and loan handling</li>
-                    <li>Loan approval and monitoring system</li>
-                    <li>Interactive and professional WinForms GUI</li>
-                </ul>
-                <p><strong>Tech Stack:</strong> C#, .NET Framework, SQL Server</p>
-                <p><a href="https://github.com/nabil-adib/Banking-Management-System" target="_blank">GitHub Repo</a></p>
-            </li>
-        </ol>
+            <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Streamlit</p>
+            <p><a href="https://github.com/nabil-adib/microprocessor-water-irrigation" target="_blank">GitHub Repo</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Library Management System</h2>
+
+            <div class="project-images">
+                <img src="../data/lms1.jpg" alt="Library System">
+                <img src="../data/lms2.jpg" alt="Library System">
+                <img src="../data/lms3.jpg" alt="Library System">
+            </div>
+
+            <p><strong>Project Overview:</strong>
+                Java desktop application with Swing GUI and MySQL backend.
+            </p>
+
+            <ul>
+                <li>Full CRUD operations</li>
+                <li>Book issuance and return tracking</li>
+                <li>Publisher management module</li>
+            </ul>
+
+            <p><strong>Tech Stack:</strong> Java, Swing, MySQL</p>
+            <p><a href="https://github.com/nabil-adib/library-management-system" target="_blank">GitHub Repo</a></p>
+        </section>
+
+        <section>
+            <h2>Banking Management System</h2>
+
+            <div class="project-images">
+                <img src="../data/bms1.jpg" alt="Banking System">
+                <img src="../data/bms2.jpg" alt="Banking System">
+                <img src="../data/bms3.jpg" alt="Banking System">
+            </div>
+
+            <p><strong>Project Overview:</strong>
+                C# Windows Forms banking simulation with role-based authentication.
+            </p>
+
+            <ul>
+                <li>Role-based login</li>
+                <li>Secure transactions</li>
+                <li>Loan approval system</li>
+            </ul>
+
+            <p><strong>Tech Stack:</strong> C#, .NET Framework, SQL Server</p>
+            <p><a href="https://github.com/nabil-adib/Banking-Management-System" target="_blank">GitHub Repo</a></p>
+        </section>
+
     </main>
 
     <footer>
         <p>Developed by Nabil Adib</p>
-        <p>Copyright &copy; 2026</p>
+        <p>Copyright © 2026</p>
+
         <a href="https://www.linkedin.com/in/nabiladib14/" target="_blank">
             <img src="../data/linkedin.png" alt="LinkedIn" width="30">
         </a>
@@ -117,6 +107,7 @@
             <img src="../data/github.png" alt="GitHub" width="30">
         </a>
     </footer>
+
 </body>
 
 </html>
