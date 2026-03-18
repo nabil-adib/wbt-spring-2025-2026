@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .input-group {
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .error {
+            color: #b91c1c;
+            font-size: 13px;
+            margin-top: 6px;
+            min-height: 18px;
+        }
+
+        button {
+            margin: 8px 8px 8px 0;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #submitBtn {
+            background: #2563eb;
+        }
+
+        #submitBtn:hover {
+            background: #1d4ed8;
+        }
+
+        .removeBtn {
+            background: #dc2626;
+        }
+
+        .removeBtn:hover {
+            background: #b91c1c;
+        }
+
+        .updateBtn {
+            background: #d97706;
+        }
+
+        .updateBtn:hover {
+            background: #b45309;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px 16px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        #tableBody tr:hover {
+            background-color: #eff6ff;
+        }
+
+        .row-young {
+            background-color: #fef9c3;
+        }
+
+        .row-mid {
+            background-color: #dcfce7;
+        }
+
+        .row-senior {
+            background-color: #fee2e2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+
+        <div class="section">
+            <h2>Add Student</h2>
+            <form id="myForm">
+
+                <div class="input-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" id="nameInput" name="name" placeholder="Enter your name">
+                    <p id="nameError" class="error"></p>
+                </div>
+
+                <div class="input-group">
+                    <label for="ageInput">Age</label>
+                    <input type="text" id="ageInput" name="age" placeholder="Enter your age">
+                    <p id="ageError" class="error"></p>
+                </div>
+
+                <div class="input-group">
+                    <label for="courseInput">Course</label>
+                    <select id="courseInput" name="course">
+                        <option value="">-- Select a course --</option>
+                        <option value="Web Technologies">Web Technologies</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="Business Communication">Business Communication</option>
+                    </select>
+                    <p id="courseError" class="error"></p>
+                </div>
+
+                <button type="submit" id="submitBtn">Submit</button>
+
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Registered Students</h2>
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Remove</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const myForm = document.getElementById('myForm');
+        const nameInput = document.getElementById('nameInput');
+        const ageInput = document.getElementById('ageInput');
+        const courseInput = document.getElementById('courseInput');
+        const nameError = document.getElementById('nameError');
+        const ageError = document.getElementById('ageError');
+        const courseError = document.getElementById('courseError');
+        const tableBody = document.getElementById('tableBody');
+
+        myForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = nameInput.value.trim();
+            const age = ageInput.value.trim();
+            const course = courseInput.value;
+
+            let isFormValid = true;
+
+            if (name === '') {
+                nameError.textContent = 'Name cannot be empty.';
+                isFormValid = false;
+            } else {
+                nameError.textContent = '';
+            }
+
+            if (age === '') {
+                ageError.textContent = 'Age cannot be empty.';
+                isFormValid = false;
+            } else if (isNaN(age)) {
+                ageError.textContent = 'Age must be a number.';
+                isFormValid = false;
+            } else {
+                ageError.textContent = '';
+            }
+
+            if (course === '') {
+                courseError.textContent = 'Please select a course.';
+                isFormValid = false;
+            } else {
+                courseError.textContent = '';
+            }
+
+            if (!isFormValid) {
+                return;
+            }
+
+            const newRow = document.createElement('tr');
+
+            if (Number(age) < 20) {
+                newRow.className = 'row-young';
+            } else if (Number(age) <= 25) {
+                newRow.className = 'row-mid';
+            } else {
+                newRow.className = 'row-senior';
+            }
+
+            const nameTd = document.createElement('td');
+            const ageTd = document.createElement('td');
+            const courseTd = document.createElement('td');
+
+            nameTd.textContent = name;
+            ageTd.textContent = age;
+            courseTd.textContent = course;
+
+            const removeTd = document.createElement('td');
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Remove';
+            removeBtn.className = 'removeBtn';
+
+            removeBtn.addEventListener('click', function () {
+                tableBody.removeChild(newRow);
+            });
+
+            removeTd.appendChild(removeBtn);
+
+            const updateTd = document.createElement('td');
+            const updateBtn = document.createElement('button');
+            updateBtn.textContent = 'Update';
+            updateBtn.className = 'updateBtn';
+
+            updateBtn.addEventListener('click', function () {
+                const updatedName = prompt('Enter new name:', nameTd.textContent);
+                const updatedAge = prompt('Enter new age:', ageTd.textContent);
+                const updatedCourse = prompt('Enter new course:', courseTd.textContent);
+
+                if (updatedName === null || updatedAge === null || updatedCourse === null) {
+                    return;
+                }
+
+                if (updatedName.trim() === '') {
+                    alert('Name cannot be empty.');
+                    return;
+                }
+
+                if (updatedAge.trim() === '') {
+                    alert('Age cannot be empty.');
+                    return;
+                } else if (isNaN(updatedAge.trim())) {
+                    alert('Age must be a number.');
+                    return;
+                }
+
+                if (updatedCourse.trim() === '') {
+                    alert('Course cannot be empty.');
+                    return;
+                }
+
+                nameTd.textContent = updatedName.trim();
+                ageTd.textContent = updatedAge.trim();
+                courseTd.textContent = updatedCourse.trim();
+
+                if (Number(updatedAge) < 20) {
+                    newRow.className = 'row-young';
+                } else if (Number(updatedAge) <= 25) {
+                    newRow.className = 'row-mid';
+                } else {
+                    newRow.className = 'row-senior';
+                }
+            });
+
+            updateTd.appendChild(updateBtn);
+
+            newRow.appendChild(nameTd);
+            newRow.appendChild(ageTd);
+            newRow.appendChild(courseTd);
+            newRow.appendChild(removeTd);
+            newRow.appendChild(updateTd);
+
+            tableBody.appendChild(newRow);
+
+            nameInput.value = '';
+            ageInput.value = '';
+            courseInput.selectedIndex = 0;
+        });
+    </script>
+
+</body>
+
+</html>
