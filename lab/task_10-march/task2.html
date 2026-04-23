@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task-2</title>
+</head>
+
+<body>
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username"><br>
+    </form>
+
+    <script>
+        const usernameInput = document.getElementById('username');
+
+        usernameInput.addEventListener('input', function () {
+            usernameInput.value = usernameInput.value.toUpperCase();
+        });
+    </script>
+</body>
+
+</html>

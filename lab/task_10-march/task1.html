@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task-1</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <form onsubmit="return validateForm()">
+        <label>First Name:</label><br>
+        <input type="text" id="firstName"><br><br>
+
+        <label>Last Name:</label><br>
+        <input type="text" id="lastName"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const first = document.getElementById("firstName").value.trim();
+            const last = document.getElementById("lastName").value.trim();
+
+            if (first === "" || last === "") {
+                alert("Both fields are required.");
+                return false;
+            }
+            else if (first.length < 2 || last.length < 2) {
+                alert("Each field must have at least 2 characters.");
+                return false;
+            }
+            else {
+                alert("Form submitted successfully");
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

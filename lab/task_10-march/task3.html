@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task-3</title>
+    <style>
+        .redText {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="ageInput">Enter Your Age:</label><br>
+        <input type="number" id="ageInput"><br>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        const ageInput = document.getElementById('ageInput');
+        const message = document.getElementById('message');
+
+        ageInput.addEventListener('input', function () {
+            const age = parseInt(ageInput.value);
+
+            message.classList.remove("redText");
+
+            if (age < 40) {
+                message.textContent = "To be a part of the community, you need to at least 40";
+            }
+            else if (age >= 40 && age <= 50) {
+                message.textContent = "You are the youngsters of this community";
+            }
+            else if (age > 50) {
+                message.textContent = "Top level members of the group";
+                message.classList.add("redText");
+            }
+        });
+    </script>
+</body>
+
+</html>

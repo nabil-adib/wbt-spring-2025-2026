@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task-4</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #ccc 1px, transparent 1px),
+                linear-gradient(to bottom, #ccc 1px, transparent 1px);
+            background-size: 10px 10px;
+            background-color: white;
+        }
+
+        #container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+            margin: 40px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        #innerBox {
+            width: 100px;
+            height: 70px;
+            border: 2px solid black;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        #innerBox p {
+            font-size: 9pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Absolute Position Example</h1>
+
+    <div id="container">
+        <p>Container Area<br>(300px x 200px)</p>
+
+        <div id="innerBox">
+            <p>Bottom<br>Right<br>(100x70px)<br>(10 box x 7 box)</p>
+        </div>
+    </div>
+</body>
+
+</html>
